@@ -1,17 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Fraunces:wght@900&display=swap");
 /*variables*/
 /*extend n mixin*/
+learn-more-btn, .article-two .article-two__content-box__text a, .article-one .article-one__content-box__text a {
+  font-family: "Fraunces", serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: hsl(212, 27%, 19%);
+  padding: 0% 2% 0% 2%;
+}
+
+typo-articles, .article-two .article-two__content-box__text p, .article-one .article-one__content-box__text p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.1285714358px;
+  text-align: left;
+  color: hsl(232, 10%, 55%);
+}
+
 box-img {
   position: center;
   size: cover;
 }
 
-titltes, header h1 {
+titltes, .article-two .article-two__content-box__text h2, .article-one .article-one__content-box__text h2, header h1 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   line-height: 69px;
   letter-spacing: 8.75px;
-  text-align: center;
 }
 
 row, header .header__navbar {
@@ -31,12 +51,15 @@ gridBoxContent img, .article-three img, .article-two img, .article-one img {
   margin: 0%;
 }
 
-/*full*/
-/*composant*/
-* {
-  font-family: "Courier New", Courier, monospace;
+link-simple, .article-two .article-two__content-box__text a, .article-one .article-one__content-box__text a, header .header__navbar ul a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
 }
 
+/*full*/
+/*composant*/
 header {
   background-image: url("./media/photos/header.jpg");
   background-position: center;
@@ -61,12 +84,7 @@ header .header__navbar ul li {
   margin: 23.5px;
 }
 header .header__navbar ul a {
-  text-decoration: none;
   color: hsl(0, 0%, 100%);
-  font-family: Barlow;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 25px;
   cursor: pointer;
 }
 header .header__navbar ul a:visited {
@@ -79,7 +97,7 @@ header .header__navbar #navbar__Contact {
   background-color: hsl(0, 0%, 100%);
   border-radius: 28px;
   margin-top: 2%;
-  color: black;
+  color: hsl(212, 27%, 19%);
   font-family: "Fraunces", serif;
   font-size: 15px;
   font-weight: 700;
@@ -99,6 +117,7 @@ header .header__arrow {
   height: 115px;
 }
 header h1 {
+  text-align: center;
   color: hsl(0, 0%, 100%);
   font-size: 56px;
   letter-spacing: 8.75px;
@@ -108,11 +127,52 @@ header h1 {
 }
 
 .article-one {
-  text-align: center;
+  align-items: center;
+}
+.article-one .article-one__content-box__text {
+  margin: 0% 16% 10% 16%;
+}
+.article-one .article-one__content-box__text h2 {
+  color: hsl(212, 27%, 19%);
+  font-size: 40px;
+  line-height: 49px;
+}
+.article-one .article-one__content-box__text a {
+  color: hsl(213, 9%, 39%);
+  border-bottom: solid 7px hsl(51, 100%, 49%);
+}
+.article-one .article-one__content-box__text a:visited {
+  text-decoration: none;
+  list-style-type: none;
+  color: hsl(213, 9%, 39%);
 }
 
 .article-two {
-  text-align: center;
+  align-items: center;
+}
+.article-two .article-two__content-box__text {
+  margin: 0% 16% 10% 16%;
+}
+.article-two .article-two__content-box__text h2 {
+  color: hsl(212, 27%, 19%);
+  font-size: 40px;
+  line-height: 49px;
+}
+.article-two .article-two__content-box__text a {
+  color: hsl(213, 9%, 39%);
+  border-bottom: solid 7px hsl(7, 99%, 70%);
+}
+.article-two .article-two__content-box__text a:visited {
+  text-decoration: none;
+  list-style-type: none;
+  color: hsl(213, 9%, 39%);
+}
+
+.article-three .article-three__content-box--graphism {
+  background-image: url("/media/photos/graphic-design.jpg");
+}
+.article-three .article-three__content-box--photo {
+  background-image: url("/media/photos/photography.jpg");
 }
 
 .article-four {
@@ -121,6 +181,11 @@ header h1 {
 .article-four .article-four__client-box {
   display: grid;
   grid-template-columns: 33% 33% 33%;
+}
+.article-four .article-four__client-box img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
 }
 
 .article-five {

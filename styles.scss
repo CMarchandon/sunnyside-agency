@@ -17,6 +17,28 @@ $center : center;
 
 /*extend n mixin*/ 
 
+learn-more-btn {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: $Very-dark-desaturated-blue;
+    padding: 0% 2% 0% 2%;
+}
+
+typo-articles {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.12857143580913544px;
+    text-align: left;
+    color: $Dark-grayish-blue;
+
+}
+
 box-img {
     position: $center;
     size: cover;
@@ -27,7 +49,6 @@ titltes {
     font-weight: 900;
     line-height: 69px;
     letter-spacing: 8.75px;
-    text-align: center;
 }
 
 row {
@@ -47,13 +68,16 @@ gridBoxContent{
 }
 }
 
-@mixin link ($color) { 
+link-simple {
     text-decoration: none;
-    color: $color;
-    font-family: Barlow;
     font-size: 18px;
     font-weight: 600;
     line-height: 25px;
+}
+
+@mixin link ($color) { 
+    color: $color;
+    @extend link-simple;
 
  &:visited {
     text-decoration: none;
@@ -65,11 +89,6 @@ gridBoxContent{
 /*full*/
 
 /*composant*/
-
-* {
-    font-family: 'Courier New', Courier, monospace;
-}
-
 header {
     background-image: url("./media/photos/header.jpg");
     background-position: center;
@@ -101,7 +120,7 @@ header {
             background-color: $White;
             border-radius: 28px;
             margin-top: 2%;
-            color: black;
+            color: $Very-dark-desaturated-blue;
             font-family: 'Fraunces', serif;
             font-size: 15px;
             font-weight: 700;
@@ -123,6 +142,7 @@ header {
     }
     h1 {
         @extend titltes;
+        text-align: center;
         color: $White;
         font-size: 56px;
         letter-spacing: 8.75px;
@@ -135,19 +155,64 @@ header {
 
 .article-one {
     @extend gridBoxContent;
-    text-align: center;
+    align-items: center;
+    .article-one__content-box__text {
+        margin: 0% 16% 10% 16%;
+        h2{
+            @extend titltes;
+            color: $Very-dark-desaturated-blue;
+            font-size: 40px;
+            line-height: 49px;
+            }
+        p {
+            @extend typo-articles;
+        }
+        a {
+            @include link ($Very-dark-grayish-blue);
+            @extend learn-more-btn;
+            border-bottom:solid 7px $Yellow;
+        }
+    }
 }
 .article-two{
     @extend gridBoxContent;
-    text-align: center;
+    align-items: center;
+    .article-two__content-box__text {
+        margin: 0% 16% 10% 16%;
+        h2{
+            @extend titltes;
+            color: $Very-dark-desaturated-blue;
+            font-size: 40px;
+            line-height: 49px;
+            }
+        p {
+            @extend typo-articles;
+        }
+        a {
+            @include link ($Very-dark-grayish-blue);
+            @extend learn-more-btn;
+            border-bottom:solid 7px $Soft-red;
+        }
+    }
 }
 .article-three{
     @extend gridBoxContent;
+    .article-three__content-box--graphism {
+        background-image: url("/media/photos/graphic-design.jpg");
+    }
+    .article-three__content-box--photo {
+        background-image: url("/media/photos/photography.jpg");
+    }
 }
 
 .article-four {
     text-align: center;
     .article-four__client-box{
+        img {
+         width: 72px;   
+         height: 72px;
+         border-radius: 50%;
+        }
         display: grid;
         grid-template-columns: 33% 33% 33%;
        
