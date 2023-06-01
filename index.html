@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Sunny Side Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
     <header>
-        <nav class="header__navabar">
-            <img src="./media/logo.svg" alt="logo sunny-side">
+        <nav class="header__navbar">
+            <img class="header__navbar__logo"src="./media/logo.svg" alt="logo sunny-side">
             <ul>
-                <li>About</li>
-                <li>Services</li>
-                <li>Project</li>
-                <li class="navbar__Contact">Contact</li>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Services</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a id="navbar__Contact" href="#">Contact</a></li>
             </ul>
         </nav>
         <h1>We are creatives</h1>
-        <img src="media/icons/icon-arrow-down.svg" alt="arrow down">
+        <img class="header__arrow" src="media/icons/icon-arrow-down.svg" alt="arrow down">
     </header>
     <article class="article-one">
         <div class="article-one__content-box">
@@ -34,13 +35,13 @@
     </article>
     <article class="article-two">
         <div class="article-two__content-box">
+            <img src="/media/photos/stand-out.jpg" alt="a pink cup on a pink backroung">
+        </div>
+        <div class="article-two__content-box">
             <h2>Stand out to the right audience</h2>
             <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, 
                 we’ll build and extend your brand in digital places. </p>
             <a href="#">LEARN MORE</a>
-        </div>
-        <div class="article-two__content-box">
-            <img src="/media/photos/photography.jpg" alt="a pink cup on a pink backroung">
         </div>
     </article>
     <article class="article-three">
@@ -49,7 +50,6 @@
             <p>Great design makes you memorable. 
                 We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
         </div>
-        <div class="article-three__content-box">
             <h2>Photography</h2>
             <p>Increase your credibility by getting the most stunning, 
                 high-quality photos that improve your business image.</p>
@@ -58,22 +58,24 @@
     <article class="article-four">
         <h2>CLIENT TESTIMONIALS</h2>
         <div class="article-four__client-box">
-            <img src="/media/people/image-emily.jpg" alt="Picture of Emily, a young blond white women">
-            <p class="article-four__client-box__quote">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-            <p class="article-four__client-box__name">Emily R.</p>
-            <p class="article-four__client-box__job">Marketing Director</p>
-        </div>
-        <div class="article-four__client-box">
-            <img src="/media/people/image-thomas.jpg" alt="Picture of Thomas, a young asian man">
-            <p class="article-four__client-box__quote">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-            <p class="article-four__client-box__name">Thomas S.</p>
-            <p class="article-four__client-box__job">Chief Operating Officer</p>
-        </div>
-        <div class="article-four__client-box">
-            <img src="/media/people/image-jennie.jpg" alt="Picture of Jennie, a midlle-aged white women whith dark hair">
-            <p class="article-four__client-box__quote">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-            <p class="article-four__client-box__name">Jennie F.</p>
-            <p class="article-four__client-box__job">Business Owner</p>
+            <div class="article-four__client-box_profil">
+                <img src="/media/people/image-emily.jpg" alt="Picture of Emily, a young blond white women">
+                <p class="article-four__client-box__quote">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+                <p class="article-four__client-box__name">Emily R.</p>
+                <p class="article-four__client-box__job">Marketing Director</p>
+            </div>
+            <div class="article-four__client-box_profil">
+                <img src="/media/people/image-thomas.jpg" alt="Picture of Thomas, a young asian man">
+                <p class="article-four__client-box__quote">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+                <p class="article-four__client-box__name">Thomas S.</p>
+                <p class="article-four__client-box__job">Chief Operating Officer</p>
+            </div>
+            <div class="article-four__client-box_profil">
+                <img src="/media/people/image-jennie.jpg" alt="Picture of Jennie, a midlle-aged white women whith dark hair">
+                <p class="article-four__client-box__quote">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+                <p class="article-four__client-box__name">Jennie F.</p>
+                <p class="article-four__client-box__job">Business Owner</p>
+            </div>
         </div>
     </article>
     <article class="article-five">
